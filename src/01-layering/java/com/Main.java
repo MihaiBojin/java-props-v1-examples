@@ -15,12 +15,75 @@
  */
 package com;
 
+import com.mihaibojin.props.core.Prop;
+import com.mihaibojin.props.core.Props;
+import com.mihaibojin.props.core.Props.Factory;
+import com.mihaibojin.props.core.resolvers.ClasspathPropertyFileResolver;
+import com.mihaibojin.props.core.resolvers.EnvResolver;
+import com.mihaibojin.props.core.resolvers.PropertyFileResolver;
+import com.mihaibojin.props.core.resolvers.SystemPropertyResolver;
+import java.nio.file.Path;
+import java.util.Properties;
+
 /** Dummy entry-point. */
 public class Main {
 
   /** Main entry point. */
   public static void main(String[] args) {
-    System.out.println("OK.");
+
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    Factory factory =
+        Props.factory()
+            .withResolver(new SystemPropertyResolver())
+            .withResolver(new EnvResolver())
+            .withResolver(new ClasspathPropertyFileResolver("/some-props.properties"))
+            .withResolver(new PropertyFileResolver(Path.of("/Users/mihaibojin/git/props-examples/src/01-layering/resources/other-props.properties")))
+        ;
+
+    try (Props props = factory.build()) {
+      Prop<String> prop = props.prop("a.duration").build();
+      System.out.println(prop.value().get());
+
+      Prop<String> cp = props.prop("java.class.path").build();
+      System.out.println(cp.value().get());
+    }
+
+ */

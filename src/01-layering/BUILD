@@ -6,7 +6,7 @@ load("@rules_jvm_external//:defs.bzl", "artifact")
 
 java_binary(
     name = "main",
-    main_class = "Main",
+    main_class = "com.Main",
     runtime_deps = [":main-library"],
 )
 
@@ -16,7 +16,7 @@ java_library(
     deps = [artifact("com.mihaibojin.props:props-core")],
     javacopts = [
         "-Xep:NullAway:ERROR",
-        "-XepOpt:NullAway:AnnotatedPackages=",
+        "-XepOpt:NullAway:AnnotatedPackages=com",
     ],
     plugins = ["nullaway"],
     resources = glob(["resources/**"]),

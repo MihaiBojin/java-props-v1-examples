@@ -7,20 +7,8 @@
   </component>
   <component name="NewModuleRootManager">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../..">
+    <content url="file://$MODULE_DIR$/../../../src/01-layering">
       <sourceFolder url="file://$MODULE_DIR$/../../../src/01-layering/java" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/../.." />
-      <excludeFolder url="file://$MODULE_DIR$/../../../bazel-bin" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../bazel-genfiles" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../bazel-out" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../bazel-props-examples" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../bazel-testlogs" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../src/02-load-simple-props" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../src/03-prop-implementation" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../src/04-refactored-prop" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../src/05-runtime-resolver-config" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../src/main" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../src/test" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

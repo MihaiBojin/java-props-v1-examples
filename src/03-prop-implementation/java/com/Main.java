@@ -16,24 +16,77 @@
 
 package com;
 
-/**
- * Dummy entry-point.
- */
+import com.mihaibojin.props.core.Props;
+import com.mihaibojin.props.core.Props.Factory;
+import com.mihaibojin.props.core.resolvers.ClasspathPropertyFileResolver;
+import com.mihaibojin.props.core.types.AbstractStringProp;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+
+/** Dummy entry-point. */
 public class Main {
 
-  /**
-   * Main entry point.
-   */
+  /** Main entry point. */
   public static void main(String[] args) {
-    System.out.println("OK.");
+    Factory factory =
+        Props.factory().withResolver(new ClasspathPropertyFileResolver("/some-props.properties"));
+
+    try (Props props = factory.build()) {
+      // do something
+    }
   }
 
-  /**
-   * Dummy method.
-   *
-   * @return true
-   */
-  public static boolean returnTrue() {
-    return true;
-  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    Factory factory =
+        Props.factory().withResolver(new ClasspathPropertyFileResolver("/some-props.properties"));
+
+    try (Props props = factory.build()) {
+      MySecretProp secretProp = props.bind(new MySecretProp("a.base64.prop"));
+      System.out.println(secretProp);
+    }
+  }
+
+  static class MySecretProp extends AbstractStringProp {
+    protected MySecretProp(String key) {
+      super(key, "I AM A DEFAULT", "", false, false);
+    }
+
+    @Override
+    public String encode(String value) {
+      return Base64.getMimeEncoder().encodeToString(value.getBytes(StandardCharsets.UTF_8));
+    }
+
+    @Override
+    public String decode(String value) {
+      return new String(Base64.getMimeDecoder().decode(value.getBytes(StandardCharsets.UTF_8)), StandardCharsets.UTF_8);
+    }
+  }
+ */

@@ -16,24 +16,33 @@
 
 package com;
 
-/**
- * Dummy entry-point.
- */
+import static java.lang.String.format;
+
+import com.mihaibojin.props.core.Prop;
+import com.mihaibojin.props.core.Props;
+import com.mihaibojin.props.core.Props.Factory;
+import com.mihaibojin.props.core.resolvers.ResolverUtils;
+import java.util.stream.Stream;
+
+/** Dummy entry-point. */
 public class Main {
 
-  /**
-   * Main entry point.
-   */
+  /** Main entry point. */
   public static void main(String[] args) {
-    System.out.println("OK.");
-  }
+    // choose which layers to load
+    String env = Stream.of(args).findFirst().orElse("dev");
+    String resolver = format("/resolvers-%s.conf", env);
 
-  /**
-   * Dummy method.
-   *
-   * @return true
-   */
-  public static boolean returnTrue() {
-    return true;
+    // load resolvers
+    Factory factory =
+        Props.factory()
+            .withResolvers(
+                // read multiple resolvers from a conf file
+                ResolverUtils.readResolverConfig(Main.class.getResourceAsStream(resolver)));
+
+    try (Props props = factory.build()) {
+      Prop<String> prop = props.prop("a.prop").build();
+      System.out.println(prop);
+    }
   }
 }

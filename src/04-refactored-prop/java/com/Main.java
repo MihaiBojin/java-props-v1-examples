@@ -16,6 +16,16 @@
 
 package com;
 
+import com.mihaibojin.props.core.Prop;
+import com.mihaibojin.props.core.Props;
+import com.mihaibojin.props.core.Props.Factory;
+import com.mihaibojin.props.core.RefactoredProp;
+import com.mihaibojin.props.core.converters.Cast;
+import com.mihaibojin.props.core.resolvers.ClasspathPropertyFileResolver;
+import java.util.List;
+import java.util.Objects;
+import java.util.function.Function;
+
 /**
  * Dummy entry-point.
  */
@@ -25,15 +35,48 @@ public class Main {
    * Main entry point.
    */
   public static void main(String[] args) {
-    System.out.println("OK.");
-  }
+    Factory factory = Props.factory().withResolver(new ClasspathPropertyFileResolver("/some-props.properties"));
 
-  /**
-   * Dummy method.
-   *
-   * @return true
-   */
-  public static boolean returnTrue() {
-    return true;
+    try (Props props = factory.build()) {
+      // do something
+    }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+      Prop<Integer> propOld = props.prop("an.old.prop", Cast.asInteger()).build();
+      Prop<Boolean> propNew = props.prop("a.new.prop", Cast.asBoolean()).build();
+
+      RefactoredProp<Boolean, Integer> prop =
+          new RefactoredProp<>(
+              props,
+              propNew,
+              propOld,
+              value -> Objects.equals(value, 0));
+      System.out.println(prop.value());
+
+ */

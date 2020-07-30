@@ -7,6 +7,7 @@ load("@rules_jvm_external//:defs.bzl", "artifact")
 java_binary(
     name = "main",
     main_class = "com.Main",
+#    args = ["prod"],
     runtime_deps = [":main-library"],
 )
 
