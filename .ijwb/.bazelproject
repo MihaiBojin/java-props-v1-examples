@@ -1,5 +1,12 @@
 directories:
+  -src/main
+  -src/test
   .
+  src/01-layering
+  -src/02-load-simple-props
+  -src/03-prop-implementation
+  -src/04-refactored-prop
+  -src/05-runtime-resolver-config
 
 workspace_type: java
 
