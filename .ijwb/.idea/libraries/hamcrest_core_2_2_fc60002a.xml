@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hamcrest-core-2.2_fc60002a">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.cache/bazel/_bazel_mihaibojin/888e41645913f9a0dedc2b7d23dddd22/external/maven/v1/https/repo1.maven.org/maven2/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
