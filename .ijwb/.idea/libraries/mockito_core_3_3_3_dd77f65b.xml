@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="mockito-core-3.3.3_dd77f65b">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.cache/bazel/_bazel_mihaibojin/888e41645913f9a0dedc2b7d23dddd22/external/maven/v1/https/repo1.maven.org/maven2/org/mockito/mockito-core/3.3.3/mockito-core-3.3.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/.blaze/libraries/mockito-core-3.3.3_94c37ac7.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -6,6 +6,6 @@ junit5_test(
     resources = glob(["resources/**"]),
     test_package = "com",
     deps = [
-        "//src/main:main",
+        "//src/main:main-library",
     ],
 )

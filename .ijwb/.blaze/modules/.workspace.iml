@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.system.id="Blaze" type="JAVA_MODULE" version="4">
+  <component name="CheckStyle-IDEA-Module">
+    <option name="configuration">
+      <map />
+    </option>
+  </component>
   <component name="NewModuleRootManager">
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../..">
@@ -8,8 +13,8 @@
       <excludeFolder url="file://$MODULE_DIR$/../.." />
       <excludeFolder url="file://$MODULE_DIR$/../../../bazel-bin" />
       <excludeFolder url="file://$MODULE_DIR$/../../../bazel-genfiles" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../bazel-java-bazel-template" />
       <excludeFolder url="file://$MODULE_DIR$/../../../bazel-out" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../bazel-props-examples" />
       <excludeFolder url="file://$MODULE_DIR$/../../../bazel-testlogs" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -20,6 +25,7 @@
     <orderEntry type="library" name="hamcrest-core-2.2_fc60002a" level="project" />
     <orderEntry type="library" name="junit-jupiter-params-5.6.2_20a373c0" level="project" />
     <orderEntry type="library" name="junit-jupiter-engine-5.6.2_1e3f77c" level="project" />
+    <orderEntry type="library" name="props-core-0.0.4_e4bd7d7c" level="project" />
     <orderEntry type="library" name="mockito-core-3.3.3_dd77f65b" level="project" />
   </component>
 </module>

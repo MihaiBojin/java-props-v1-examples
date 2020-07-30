@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="hamcrest-library-2.2_727b127e">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.cache/bazel/_bazel_mihaibojin/888e41645913f9a0dedc2b7d23dddd22/external/maven/v1/https/repo1.maven.org/maven2/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/.blaze/libraries/hamcrest-library-2.2_53aec214.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

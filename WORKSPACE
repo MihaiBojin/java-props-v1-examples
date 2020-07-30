@@ -52,6 +52,7 @@ load("@com_github_mihaibojin_bazel_java_rules//junit5:workspace.bzl", "junit5_wo
 load("@rules_jvm_external//:defs.bzl", "maven_install")
 maven_install(
     artifacts =
+        ["com.mihaibojin.props:props-core:0.0.4"] +
         errorprone_workspace() +
         nullaway_workspace() +
         junit5_workspace() +
