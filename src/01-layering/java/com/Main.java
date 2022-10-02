@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com;
 
 import com.mihaibojin.props.core.Prop;
@@ -32,58 +33,4 @@ public class Main {
   public static void main(String[] args) {
 
   }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-    Factory factory =
-        Props.factory()
-            .withResolver(new SystemPropertyResolver())
-            .withResolver(new EnvResolver())
-            .withResolver(new ClasspathPropertyFileResolver("/some-props.properties"))
-            .withResolver(new PropertyFileResolver(Path.of("/Users/mihaibojin/git/props-examples/src/01-layering/resources/other-props.properties")))
-        ;
-
-    try (Props props = factory.build()) {
-      Prop<String> prop = props.prop("a.duration").build();
-      System.out.println(prop.value().get());
-
-      Prop<String> cp = props.prop("java.class.path").build();
-      System.out.println(cp.value().get());
-    }
-
- */

@@ -5,7 +5,7 @@
       <map />
     </option>
   </component>
-  <component name="NewModuleRootManager">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../src/01-layering">
       <sourceFolder url="file://$MODULE_DIR$/../../../src/01-layering/java" isTestSource="false" />
