@@ -1,6 +1,6 @@
 # BEGIN https://github.com/bazelbuild/rules_jvm_external
-RULES_JVM_EXTERNAL_TAG = "3.2"
-RULES_JVM_EXTERNAL_SHA = "82262ff4223c5fda6fb7ff8bd63db8131b51b413d26eb49e3131037e79e324af"
+RULES_JVM_EXTERNAL_TAG = "4.2"
+RULES_JVM_EXTERNAL_SHA = "cd1a77b7b02e8e008439ca76fd34f5b07aecb8c752961f9640dea15e9e5ba1ca"
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive", "http_file")
 http_archive(
@@ -15,11 +15,11 @@ http_archive(
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 http_archive(
     name = "bazel_skylib",
-    sha256 = "97e70364e9249702246c0e9444bccdc4b847bed1eb03c5a3ece4f83dfe6abc44",
     urls = [
-        "https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.0.2/bazel-skylib-1.0.2.tar.gz",
-        "https://github.com/bazelbuild/bazel-skylib/releases/download/1.0.2/bazel-skylib-1.0.2.tar.gz",
+        "https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.3.0/bazel-skylib-1.3.0.tar.gz",
+        "https://github.com/bazelbuild/bazel-skylib/releases/download/1.3.0/bazel-skylib-1.3.0.tar.gz",
     ],
+    sha256 = "74d544d96f4a5bb630d465ca8bbcfe231e3594e5aae57e1edbf17a6eb3ca2506",
 )
 
 load("@bazel_skylib//:workspace.bzl", "bazel_skylib_workspace")
@@ -70,17 +70,25 @@ maven_install(
 
 # BEGIN https://github.com/buchgr/rules_jmh
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+# http_archive(
+#   name = "rules_jmh",
+#   strip_prefix = "MihaiBojin-rules_jmh-f3b9bd0",
+#   url = "https://github.com/MihaiBojin/rules_jmh/zipball/f3b9bd0435d6ab645f0a81cfcd365dc6fb65f820",
+#   type = "zip",
+#   sha256 = "d87a34ed7d17910bacebcaf2786fee8a284d5f640ef59e750975d59433e79f00",
+# )
 http_archive(
   name = "rules_jmh",
-  strip_prefix = "MihaiBojin-rules_jmh-f3b9bd0",
-  url = "https://github.com/MihaiBojin/rules_jmh/zipball/f3b9bd0435d6ab645f0a81cfcd365dc6fb65f820",
+  strip_prefix = "buchgr-rules_jmh-6ccf8d7",
+  url = "https://github.com/buchgr/rules_jmh/zipball/6ccf8d7b270083982e5c143935704b9f3f18b256",
   type = "zip",
-  sha256 = "d87a34ed7d17910bacebcaf2786fee8a284d5f640ef59e750975d59433e79f00",
+  sha256 = "dbb7d7e5ec6e932eddd41b910691231ffd7b428dff1ef9a24e4a9a59c1a1762d",
 )
 
 load("@rules_jmh//:deps.bzl", "rules_jmh_deps")
 rules_jmh_deps()
 
 load("@rules_jmh//:defs.bzl", "rules_jmh_maven_deps")
-rules_jmh_maven_deps(fetch_sources = True)
+# rules_jmh_maven_deps(fetch_sources = True)
+rules_jmh_maven_deps()
 # END https://github.com/buchgr/rules_jmh

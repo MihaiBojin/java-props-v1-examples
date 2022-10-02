@@ -1,15 +1,15 @@
 directories:
-  src/01-layering
+  -src/01-layering
   -src/02-load-simple-props
   -src/03-prop-implementation
   -src/04-refactored-prop
   -src/05-runtime-resolver-config
   -src/main
   -src/test
-  #.
+  .
 
 workspace_type: java
 
-java_language_level: 11
+java_language_level: 17
 
 derive_targets_from_directories: true
